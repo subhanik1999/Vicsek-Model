@@ -328,11 +328,11 @@ for events in range(timePoints):
                 N = N + 1
         
         numCells.append(N)
-        with open('Time-Step Data.csv', mode='w') as csv_file:
-            fieldnames = ['Time-Step', 'CellID', 'XPosition', 'YPosition', 'Angle', 'CellDivisionTime']
-            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-            for i in range():
-                writer.writerow({'Time-Step': events, 'CellID': i, 'XPosition': nextPos[i]['x'], 'YPosition': nextPos[i]['y'], 'Angle': nextPos[i]['a'], 'CellDivisionTime': nextPos[i]['t']})
+    with open('Time-Step Data.csv', mode='w') as csv_file:
+        fieldnames = ['Time-Step', 'CellID', 'XPosition', 'YPosition', 'Angle', 'CellDivisionTime']
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+        for i in range(N):
+            writer.writerow({'Time-Step': events, 'CellID': i, 'XPosition': nextPos[i]['x'], 'YPosition': nextPos[i]['y'], 'Angle': nextPos[i]['a'], 'CellDivisionTime': nextPos[i]['t']})
     pos.append(nextPos)
     
 #print("\nSTATE (ITR = " + repr(events) + ") :")
